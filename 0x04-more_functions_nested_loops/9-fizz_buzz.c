@@ -38,7 +38,7 @@ int main(void)
 	n = 100;
 	if (n == 100)
 	{
-		printf("Buzz");
+		printf("Buzz\n");
 	}
 	return (0);
 }
