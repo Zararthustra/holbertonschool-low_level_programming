@@ -11,7 +11,7 @@ int main(void)
 {
 	int n = 1;
 
-	while (n <= 100)
+	while (n < 100)
 	{
 		if ((n % 3 == 0) && (n % 5 == 0))
 		{
@@ -31,6 +31,11 @@ int main(void)
 		}
 		printf(" ");
 		n++;
+	}
+	n = 100;
+	if (n == 100)
+	{
+		printf("Buzz");
 	}
 	return (0);
 }
