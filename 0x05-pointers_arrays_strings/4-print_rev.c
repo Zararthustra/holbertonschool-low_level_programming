@@ -28,13 +28,13 @@ void print_rev(char *s)
 	int length;
 
 	length = _strlen(s);
-	while (*s != '\0')
+	while (*s)
 	{
 		s++;
 	}
-	while (length-- >= 0)
+	while (length-- > 0)
 	{
-		_putchar(*s--);
+		_putchar(*--s);
 	}
 	_putchar('\n');
 }
