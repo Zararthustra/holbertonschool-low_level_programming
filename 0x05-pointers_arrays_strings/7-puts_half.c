@@ -39,11 +39,11 @@ void puts_half(char *str)
 		a++;
 		}
 	}
-	else
+	else if (b % 2 != 0)
 	{
 		while (str[a])
 		{
-			if (((b / 2) - 1)<= a)
+			if (((b + 1) / 2) <= a)
 			{
 				_putchar(str[a]);
 			}
