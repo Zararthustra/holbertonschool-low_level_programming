@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * dswap_int - swap value of 2 ints
+ * swap_char - swap value of 2 chars
  *
- * @a: int a
- * @b: int b
- * return void
+ * @a: char a
+ * @b: char b
+ * Return: void
  */
 
 void swap_char(char *a, char *b)
