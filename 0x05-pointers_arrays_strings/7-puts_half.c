@@ -28,12 +28,26 @@ void puts_half(char *str)
 	int a = 0;
 	int b = _strlen(str);
 
-	while (str[a])
+	if (b % 2 == 0)
 	{
-		if ((b / 2) <= a)
+		while (str[a])
 		{
-			_putchar(str[a]);
+			if ((b / 2) <= a)
+			{
+				_putchar(str[a]);
+			}
+		a++;
 		}
-	a++;
+	}
+	else
+	{
+		while (str[a])
+		{
+			if (((b / 2) - 1)<= a)
+			{
+				_putchar(str[a]);
+			}
+		a++;
+		}
 	}
 }
