@@ -25,29 +25,18 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int a = 0;
-	int b = _strlen(str);
+	int len = _strlen(str);
 
-	if (b % 2 == 0)
+	if (len % 2 != 0)
 	{
-		while (str[a])
-		{
-			if ((b / 2) <= a)
-			{
-				_putchar(str[a]);
-			}
-		a++;
-		}
+		len = len + 1;	
 	}
-	else if (b % 2 != 0)
+	len = len / 2;
+	while (str[len])
 	{
-		while (str[a])
-		{
-			if (((b + 1) / 2) <= a)
-			{
-				_putchar(str[a]);
-			}
-		a++;
-		}
+		_putchar(str[len]);
+		len++;
 	}
+	_putchar('\n');
 }
+
