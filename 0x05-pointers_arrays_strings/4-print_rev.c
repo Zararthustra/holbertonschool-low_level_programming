@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_rev - prints a string, in reverse
+ * _strlen - returns length of string
  * @s: string
- * Return: void
+ * Return: string length
  */
 
 int _strlen(char *s)
@@ -16,6 +16,12 @@ int _strlen(char *s)
 	}
 	return (a);
 }
+
+/**
+ * print_rev - prints a string, in reverse
+ * @s: string
+ * Return: void
+ */
 
 void print_rev(char *s)
 {
