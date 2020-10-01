@@ -1,44 +1,19 @@
 #include "holberton.h"
 
 /**
- * _strlen - returns length of a string
- * @s: string
- * Return: length size
- */
-
-int _strlen(char *s)
-{
-	int a = 0;
-
-	while (*s++)
-	{
-		a++;
-	}
-	return (a);
-}
-
-/**
  * _strcmp - compares 2 strings
  * @s1: string 1
  * @s2: string 2
- * Return: -15 if s1 < s2,
- * 15 if s1 > s2,
- * 0 if s1 = s2.
+ * Return: difference between 2 strings
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int p = _strlen(s1);
-	int q = _strlen(s2);
+	int a = 0;
 
-	if (p < q)
+	while (s1[a] && s2[a] && s1[a] == s2[a])
 	{
-		return (-15);
+		a++;
 	}
-	else if (p > q)
-	{
-		return (15);
-	}
-	else
-	return (0);
+	return (s1[a] - s2[a]);
 }
