@@ -8,7 +8,7 @@
 
 char *cap_string(char *s)
 {
-	char sep[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char sep[13] = " \t\n,;.!?\"(){}";
 	int a;
 	int n;
 
