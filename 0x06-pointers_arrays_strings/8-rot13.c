@@ -17,7 +17,7 @@ char *rot13(char *s)
 	while (s[x])
 	{
 		y = 0;
-		while (y < 26)
+		while (y < 52)
 		{
 			if (s[x] == a[y])
 			{
