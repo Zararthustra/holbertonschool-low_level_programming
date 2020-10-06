@@ -12,16 +12,16 @@ char *_strstr(char *haystack, char *needle)
 {
 	int a;
 	int b;
-	int tmp;
+	char * tmp = 0;
 
 	a = 0;
 	while (haystack[a])
 	{
 		b = 0;
-		tmp = a;
-		while (needle[b] == haystack[a])
+		*tmp = haystack[a];
+		while (needle[b] == haystack[a] && needle[b])
 		{
-			return (&haystack[tmp]);
+			return (tmp);
 			b++;
 		}
 		a++;
