@@ -14,7 +14,7 @@ int _update_sqrt(int a, int n)
 	if (a * a == n)
 		return (a);
 	else
-		return (_update_sqrt(a + 1, n)); 
+		return (_update_sqrt(a + 1, n));
 }
 
 /**
