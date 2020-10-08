@@ -28,9 +28,8 @@ int check_pal(char *s, int i, int j)
 {
 	if (s[i] != s[j - i])
 		return (0);
-	else if (i == ((j + 1)/ 2))
+	else if (i == ((j + 1) / 2))
 		return (1);
-	else	
 	return (check_pal(s, ++i, j));
 }
 
