@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/*
+/**
  * main - prints program name
  * @argc: argc
  * @argv: argv
