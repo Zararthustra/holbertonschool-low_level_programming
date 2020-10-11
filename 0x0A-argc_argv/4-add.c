@@ -1,33 +1,31 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <features.h>
 
 /**
  * main - add numbers
  * @argc: argc
  * @argv: argv
- * Return: result or error or 0
+ * Return: result, error if not all digits,
+ * 0 if no number passed to the program
  */
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i;
 	int add = 0;
 
-	if (argc == 0)
-		printf("0\n");
-	if (!isdigit(argv[i]))
+	i = 1;
+	while (i < argc)
 	{
-		printf("Error\n");
-		return (1);
+		if (*argv[i] < '0' || *argv[i] > '9')
+		{
+			printf("Error\n");
+			return (1);
+		}
+		add = add + atoi(argv[i]);
+		i++;
 	}
-	i = 0;
-	add = add + atoi(argv[i]);
-	while (argc > 1)
-	{
-		printf("%d\n", add);
-		i++;	
-	}
+	printf("%d\n", add);
 	return (0);
 }
