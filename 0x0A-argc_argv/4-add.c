@@ -13,15 +13,21 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int j;
 	int add = 0;
 
 	i = 1;
 	while (i < argc)
 	{
-		if (*argv[i] < '0' || *argv[i] > '9' || *argv[i] == '\0')
+		j = 0;
+		while (argv[i][j])
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9' || argv[i][j] == '\0')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
 		add = add + atoi(argv[i]);
 		i++;
