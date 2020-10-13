@@ -58,5 +58,4 @@ char *_strdup(char *str)
 		return (NULL);
 	_strcpy(s, str);
 	return (s);
-	free(s);
 }
