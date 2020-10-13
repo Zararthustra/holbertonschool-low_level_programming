@@ -41,15 +41,21 @@ char *str_concat(char *s1, char *s2)
 	a = 0;
 	while (s1[a])
 	{
-		s[a] = s1[a];
-		a++;
+		if (s1 != NULL && s1[a])
+		{
+			s[a] = s1[a];
+			a++;
+		}
 	}
 	b = 0;
 	while (s2[b])
 	{
-		s[a] = s2[b];
-		a++;
-		b++;
+		if (s2 != NULL && s2[b])
+		{
+			s[a] = s2[b];
+			a++;
+			b++;
+		}
 	}
 	s[a] = '\0';
 	return (s);
