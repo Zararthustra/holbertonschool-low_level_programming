@@ -19,34 +19,6 @@ int _strlen(char *s)
 }
 
 /**
- * _strcat - concat 2 strings
- * @dest: destination string
- * @src: source string
- * Return: dest
- */
-
-char *_strcat(char *dest, char *src)
-{
-	int a;
-	int b;
-
-	a = 0;
-	while (dest[a])
-	{
-		a++;
-	}
-	b = 0;
-	while (src[b])
-	{
-		dest[a] = src[b];
-		b++;
-		a++;
-	}
-	dest[a] = '\0';
-	return (dest);
-}
-
-/**
  * str_concat - concat two strings
  * @s1: string 1
  * @s2: string 2
@@ -79,5 +51,6 @@ char *str_concat(char *s1, char *s2)
 		a++;
 		b++;
 	}
+	s[a] = '\0';
 	return (s);
 }
