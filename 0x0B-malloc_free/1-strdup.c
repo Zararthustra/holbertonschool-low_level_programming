@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *  * _strlen - returns length of a string
- *   * @s: string
- *    * Return: length size
- *     */
+ * _strlen - returns length of a string
+ * @s: string
+ * Return: length size
+ */
 
 int _strlen(char *s)
 {
@@ -19,11 +19,11 @@ int _strlen(char *s)
 }
 
 /**
- *  * _strcpy - copies the string pointed to by src
- *   * @src: source
- *    * @dest: dest
- *     * Return: dest
- *      */
+ * _strcpy - copies the string pointed to by src
+ * @src: source
+ * @dest: dest
+ * Return: dest
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -53,9 +53,9 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	s = malloc(len * sizeof(char));
-	_strcpy(s, str);
 	if (s == NULL)
 		return (NULL);
+	_strcpy(s, str);
 	return (s);
 	free (s);
 }
