@@ -49,13 +49,20 @@ char *_strdup(char *str)
 {
 	char *s;
 	int len = _strlen(str);
+	int a;
 
 	if (str == NULL)
 		return (NULL);
 	s = malloc((len + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
-	_strcpy(s, str);
+	a = 0;
+	while (a < len)
+	{
+		s[a] = str[a];
+		a++;
+	}
+	s[a] = '\0';
 	return (s);
 	free(s);
 }
