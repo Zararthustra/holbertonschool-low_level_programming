@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * string_concat - cat two strings
+ * string_nconcat - cat two strings
  * @s1: string1
  * @s2: string2
  * @n: bytes added
