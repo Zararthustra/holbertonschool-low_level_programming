@@ -9,6 +9,8 @@ int main(void)
 {
 	char *str;
 
+	str = "012345678\n";
+	puts_half(str);
 	str = "0123456789";
 	puts_half(str);
 	return (0);
