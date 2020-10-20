@@ -10,6 +10,8 @@ int _strlen(char *s)
 {
 	int a = 0;
 
+	if (s == NULL);
+		return (NULL);
 	while (*s++)
 	{
 		a++;
@@ -51,13 +53,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	i = 0;
-	while (i < _strlen(name))
+	while (i < name_len)
 	{
 		ndog->name[i] = name[i];
 		i++;
 	}
 	i = 0;
-	while (i < _strlen(owner))
+	while (i < owner_len)
 	{
 		ndog->owner[i] = owner[i];
 		i++;
