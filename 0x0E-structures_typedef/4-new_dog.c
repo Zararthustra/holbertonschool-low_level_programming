@@ -35,10 +35,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	ndog->name = malloc((_strlen(name) + 1) * sizeof(char));
 	if (ndog->name == NULL)
+	{
+		free(ndog);
 		return (NULL);
+	}
 	ndog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
 	if (ndog->owner == NULL)
+	{
+		free(ndog);
+		free(ndog->name);
 		return (NULL);
+	}
 	i = 0;
 	while (i < _strlen(name))
 	{
