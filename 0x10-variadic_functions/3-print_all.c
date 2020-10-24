@@ -43,7 +43,10 @@ void print_float(va_list arg)
 
 void print_string(va_list arg)
 {
-	printf("%s", va_arg(arg, char *));
+	char *tmp = va_arg(arg, char *);
+	if (tmp == NULL)
+		tmp = "(nil)";
+	printf("%s", tmp);
 }
 
 /**
@@ -64,6 +67,7 @@ void print_all(const char * const format, ...)
 	};
 	int i;
 	int j;
+	char *separator = "";
 
 	va_start(all_format, format);
 	i = 0;
@@ -74,9 +78,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == types[j].format[0])
 			{
+				printf("%s", separator);
+				separator = ", ";
 				types[j].f(all_format);
-				if (format[i + 1] != '\0')
-					printf(", ");
 			}
 			j++;
 		}
