@@ -18,11 +18,11 @@ int _strlen(const char *s)
 }
 
 /**
-* add_node - adds a new node at the beginning of a list_t list
-* @head: head pointer
-* @str: string to duplicate
-* Return: adddress of new element, else NULL
-*/
+ * add_node - adds a new node at the beginning of a list_t list
+ * @head: head pointer
+ * @str: string to duplicate
+ * Return: adddress of new element, else NULL
+ */
 
 list_t *add_node(list_t **head, const char *str)
 {
